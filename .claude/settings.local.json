@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -l C:/xampp/htdocs/repmandat/controllers/KegiatanController.php)",
+      "Bash(php -l C:/xampp/htdocs/repmandat/models/KegiatanInnas.php)",
+      "Bash(php -l C:/xampp/htdocs/repmandat/models/Administrasi.php)",
+      "Bash(php -l C:/xampp/htdocs/repmandat/views/kegiatan/index.php)",
+      "Bash(C:/xampp/mysql/bin/mysql.exe -u root -e \"USE repmandat; SELECT * FROM roles;\")",
+      "Bash(C:/xampp/mysql/bin/mysql.exe -u root --password= -e \"USE repmandat; SELECT * FROM roles;\")",
+      "Bash(C:/xampp/mysql/bin/mysql.exe -u root -e \"SHOW DATABASES;\")",
+      "Bash(C:/xampp/mysql/bin/mysql.exe -u root -e \"USE wandai; SELECT * FROM roles; DESCRIBE users;\")",
+      "Bash(wc -l C:/xampp/htdocs/repmandat/views/tim/*.php)",
+      "Bash(ls C:/xampp/htdocs/repmandat/database/*.sql)",
+      "Bash(C:/xampp/mysql/bin/mysql.exe -u root wandai -e \"SHOW TABLES LIKE 'user_teams'; DESCRIBE user_teams;\")",
+      "Bash(php -r ':*)",
+      "Bash(find /c/xampp/htdocs/repmandat -type f \\\\\\( -name \"*.php\" -o -name \"*.js\" -o -name \"*.css\" \\\\\\) ! -path \"*/vendor/*\" ! -path \"*/.git/*\" -exec basename {} \\\\;)",
+      "Bash(mkdir -p /tmp/docx_bast)",
+      "Read(//tmp/**)",
+      "Bash(\"C:/Program Files/7-Zip/7z.exe\" x -y \"C:/Users/Asus/Downloads/Template BAST Honor.docx\" word/document.xml)"
+    ]
+  }
+}

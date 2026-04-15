@@ -1,0 +1,284 @@
+/* =========
+   Global Font (Google Fonts)
+   ========= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========
+   CSS Variables (Brand Wandai)
+   ========= */
+:root{
+  --primary-color: #F3C623;
+  --bg-soft: #FEF3E2;
+  --accent-1: #FFB22C;
+  --accent-2: #FA812F;
+  --text-1: #222;
+  --text-2: #555;
+  --border: #e6e6e6;
+  --sidebar-width: 250px;
+  --radius: 12px;
+  --shadow-sm: 0 2px 6px rgba(0,0,0,.06);
+  --shadow-md: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* =========
+   Base & Typography
+   ========= */
+html, body{ height: 100%; }
+
+body{
+  background: var(--bg-soft);
+  color: var(--text-1);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: .75rem;
+}
+
+p{ color: var(--text-2); }
+
+/* =========
+   Force Poppins across Bootstrap, DataTables & components
+   ========= */
+.table,
+table,
+table.dataTable,
+.dataTables_wrapper,
+.dataTables_wrapper label,
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate,
+.dataTables_wrapper .dataTables_paginate a,
+.modal,
+.modal * ,
+.btn,
+.form-control,
+.form-select,
+.form-check-label,
+.badge,
+.pagination,
+.dropdown-menu,
+.dropdown-item {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* =========
+   Layout Shell
+   ========= */
+.app{
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.content-wrapper{ padding: 2rem; }
+
+/* =========
+   Sidebar
+   ========= */
+.sidebar{
+  background: #fff;
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  box-shadow: var(--shadow-sm);
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar h5{
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #444;
+  padding: 1rem 1.25rem;
+  margin: 0 0 .5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.sidebar .nav{ padding: .5rem .5rem 1.25rem; }
+
+.sidebar .nav-link{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 500;
+  color: #555;
+  border-radius: 10px;
+  padding: .6rem .9rem;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+  margin: 2px 6px;
+}
+
+.sidebar .nav-link i{ font-size: 1.1rem; }
+
+.sidebar .nav-link:hover{
+  background: var(--accent-1);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.sidebar .nav-link.active{
+  background: var(--primary-color);
+  color: #000;
+  font-weight: 600;
+  border-left: 4px solid var(--accent-2);
+}
+
+/* =========
+   Navbar / Topbar
+   ========= */
+.navbar{
+  background: #fff !important;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+}
+
+.navbar-brand{ font-weight: 600; letter-spacing: .3px; }
+
+/* =========
+   Cards, Tables, Forms, Buttons
+   ========= */
+.card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.table thead th{
+  background: #fff7d6;
+  border-bottom: 1px solid var(--border);
+}
+
+/* DataTables spacing & controls */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+  margin: .25rem .5rem;
+}
+
+/* Inputs focus */
+.form-control:focus, .form-select:focus{
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 .2rem rgba(243,198,35,.25);
+}
+
+/* Buttons */
+.btn-primary{
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #000;
+  font-weight: 600;
+}
+.btn-primary:hover{ filter: brightness(0.95); color: #000; }
+
+.btn-accent{
+  background: var(--accent-1);
+  border-color: var(--accent-1);
+  color: #fff;
+}
+.btn-accent:hover{ filter: brightness(0.95); color: #fff; }
+
+/* Badges / Pills */
+.badge-primary{ background: var(--primary-color); color: #000; }
+
+/* =========
+   Footer
+   ========= */
+footer{
+  font-size: .9rem;
+  color: #999;
+  padding: 1rem 2rem;
+}
+
+/* =========
+   Responsive
+   ========= */
+@media (max-width: 992px){
+  .app{ grid-template-columns: 1fr; }
+  .sidebar{
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+  .content-wrapper{ padding: 1.25rem; }
+}
+
+/* =========
+   Force Poppins on Navbar
+   ========= */
+.navbar,
+.navbar-brand,
+.navbar-text,
+.navbar a,
+.navbar .btn {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* === Bootstrap font var -> Poppins (global) === */
+:root { --bs-body-font-family: 'Poppins', sans-serif !important; }
+
+/* === Pastikan Navbar ikut var di atas === */
+.navbar, .navbar * { font-family: var(--bs-body-font-family) !important; }
+
+/* =========================================================
+   WANDAI LOGO RESIZE - ADDED BY SYSTEM
+   ========================================================= */
+
+/* =========
+   Logo WANDAI - Ukuran Diperbesar
+   ========= */
+
+/* Target semua kemungkinan logo di navbar */
+.navbar-brand img,
+.navbar img[alt*="wandai"],
+.navbar img[alt*="WANDAI"],
+.navbar img[src*="wandai"],
+img.logo-wandai,
+.logo-brand,
+.brand-logo,
+.navbar-logo {
+  height: 55px !important;
+  width: auto !important;
+  object-fit: contain;
+  max-height: 55px;
+  display: block;
+}
+
+/* Pastikan navbar-brand align dengan logo */
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+/* Jika logo ada di dalam tag <a> */
+.navbar-brand a img {
+  height: 55px !important;
+  width: auto !important;
+}
+
+/* =========
+   Responsive - Mobile
+   ========= */
+@media (max-width: 768px) {
+  .navbar-brand img,
+  img.logo-wandai {
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img,
+  img.logo-wandai {
+    height: 40px !important;
+  }
+}

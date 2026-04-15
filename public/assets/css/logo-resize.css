@@ -1,0 +1,54 @@
+/* =========================================================
+   WANDAI LOGO RESIZE - CSS TAMBAHAN
+   Tambahkan file ini setelah style.css utama
+   ========================================================= */
+
+/* =========
+   Logo WANDAI - Ukuran Diperbesar
+   ========= */
+
+/* Target semua kemungkinan logo di navbar */
+.navbar-brand img,
+.navbar img[alt*="wandai"],
+.navbar img[alt*="WANDAI"],
+.navbar img[src*="wandai"],
+img.logo-wandai,
+.logo-brand,
+.brand-logo,
+.navbar-logo {
+  height: 55px !important;
+  width: auto !important;
+  object-fit: contain;
+  max-height: 55px;
+  display: block;
+}
+
+/* Pastikan navbar-brand align dengan logo */
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+/* Jika logo ada di dalam tag <a> */
+.navbar-brand a img {
+  height: 55px !important;
+  width: auto !important;
+}
+
+/* =========
+   Responsive - Mobile
+   ========= */
+@media (max-width: 768px) {
+  .navbar-brand img,
+  img.logo-wandai {
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img,
+  img.logo-wandai {
+    height: 40px !important;
+  }
+}
