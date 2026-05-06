@@ -603,37 +603,6 @@ CREATE TABLE `verifikasi_log` (
   `created_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
--- Stand-in struktur untuk VIEW v_administrasi_full
--- --------------------------------------------------------
-CREATE TABLE `v_administrasi_full` (
-);
-
--- --------------------------------------------------------
--- Stand-in struktur untuk VIEW v_kegiatan_summary
--- --------------------------------------------------------
-CREATE TABLE `v_kegiatan_summary` (
-);
-
--- --------------------------------------------------------
--- Stand-in struktur untuk VIEW v_users_lengkap
--- --------------------------------------------------------
-CREATE TABLE `v_users_lengkap` (
-  `id` int(11),
-  `name` varchar(255),
-  `gelar_depan` varchar(50),
-  `gelar_belakang` varchar(100),
-  `nama_lengkap` varchar(408),
-  `nip` varchar(20),
-  `pangkat` varchar(100),
-  `golongan` varchar(20),
-  `jabatan` varchar(150),
-  `email` varchar(150),
-  `role_id` int(11),
-  `role_name` varchar(100),
-  `team_id` int(11),
-  `team_name` varchar(255)
-);
 
 -- --------------------------------------------------------
 -- View: v_administrasi_full
