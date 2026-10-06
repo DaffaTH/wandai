@@ -1,0 +1,16 @@
+# Konfigurasi sensitif — jangan di-commit
+config/sync.php
+config/database.php
+
+# Log sync
+sync/sync.log
+
+# Vendor / dependencies
+vendor/
+
+# Temporary / debug files
+*.log
+*.tmp
+check_*.php
+debug_*.php
+test*.php
